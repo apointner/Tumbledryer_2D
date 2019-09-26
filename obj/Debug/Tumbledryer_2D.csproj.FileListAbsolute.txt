@@ -1,0 +1,9 @@
+C:\Users\frank\Documents\GitHub\Tumbledryer_2D\bin\Debug\Tumbledryer_2D.exe.config
+C:\Users\frank\Documents\GitHub\Tumbledryer_2D\bin\Debug\Tumbledryer_2D.exe
+C:\Users\frank\Documents\GitHub\Tumbledryer_2D\bin\Debug\Tumbledryer_2D.pdb
+C:\Users\frank\Documents\GitHub\Tumbledryer_2D\obj\Debug\Tumbledryer_2D.csprojAssemblyReference.cache
+C:\Users\frank\Documents\GitHub\Tumbledryer_2D\obj\Debug\Tumbledryer_2D.Tumbledryer_2D.resources
+C:\Users\frank\Documents\GitHub\Tumbledryer_2D\obj\Debug\Tumbledryer_2D.Properties.Resources.resources
+C:\Users\frank\Documents\GitHub\Tumbledryer_2D\obj\Debug\Tumbledryer_2D.csproj.GenerateResource.cache
+C:\Users\frank\Documents\GitHub\Tumbledryer_2D\obj\Debug\Tumbledryer_2D.exe
+C:\Users\frank\Documents\GitHub\Tumbledryer_2D\obj\Debug\Tumbledryer_2D.pdb
