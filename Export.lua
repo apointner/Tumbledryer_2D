@@ -32,9 +32,9 @@ function LuaExportAfterNextFrame()
 
 	--Let's send the data to the software:
 	socket.try(Nutkicker_socket:send(string.format("%.4f, %.4f, %.4f \n",		
-													NMC_inertial_Bank,			--Euler[0]
-													NMC_inertial_Pitch,			--Euler[2]
-													NMC_Accel.x					--Accel[0]
+													NMC_inertial_Bank,
+													NMC_inertial_Pitch,
+													NMC_Accel.y
 																							)))
 end
 
