@@ -87,9 +87,14 @@ namespace Tumbledryer_2D
                         {
                             break;
                         }
-                        //todo: make sure that a new datastring is added (Updated), even if there already is one, because the other side will only peek().
-                        //Airlock.Container.TryAdd(s);
-                        reader.DiscardBufferedData();
+
+                        //clear the airlock
+                        while (Airlock.TryTake(out string os))
+                        {
+                            //do nothing
+                        }
+                        //Now we can add the datastring
+                        Airlock.TryAdd(s);
                     }
                     reader.Close();
                     writer.Close();

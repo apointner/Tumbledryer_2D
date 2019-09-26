@@ -33,6 +33,8 @@
             this.txtbx_IP = new System.Windows.Forms.TextBox();
             this.lbl_usingIP = new System.Windows.Forms.Label();
             this.grpbx_Input = new System.Windows.Forms.GroupBox();
+            this.lbl_usingPort = new System.Windows.Forms.Label();
+            this.txtbxPort = new System.Windows.Forms.TextBox();
             this.rdbtn_OtherMachine = new System.Windows.Forms.RadioButton();
             this.rdbtn_ThisMachine = new System.Windows.Forms.RadioButton();
             this.grpbx_Output = new System.Windows.Forms.GroupBox();
@@ -41,9 +43,8 @@
             this.cmbbx_COMport = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.txtbx_Status = new System.Windows.Forms.TextBox();
-            this.UpdateServerStatus = new System.Windows.Forms.Timer(this.components);
-            this.lbl_usingPort = new System.Windows.Forms.Label();
-            this.txtbxPort = new System.Windows.Forms.TextBox();
+            this.Timer_UpdateServerStatus = new System.Windows.Forms.Timer(this.components);
+            this.Timer_ReadAirlock = new System.Windows.Forms.Timer(this.components);
             this.grpbx_Input.SuspendLayout();
             this.grpbx_Output.SuspendLayout();
             this.SuspendLayout();
@@ -93,6 +94,24 @@
             this.grpbx_Input.TabIndex = 3;
             this.grpbx_Input.TabStop = false;
             this.grpbx_Input.Text = "Input";
+            // 
+            // lbl_usingPort
+            // 
+            this.lbl_usingPort.AutoSize = true;
+            this.lbl_usingPort.Location = new System.Drawing.Point(188, 111);
+            this.lbl_usingPort.Name = "lbl_usingPort";
+            this.lbl_usingPort.Size = new System.Drawing.Size(87, 20);
+            this.lbl_usingPort.TabIndex = 6;
+            this.lbl_usingPort.Text = "Using Port:";
+            // 
+            // txtbxPort
+            // 
+            this.txtbxPort.Location = new System.Drawing.Point(192, 134);
+            this.txtbxPort.Name = "txtbxPort";
+            this.txtbxPort.Size = new System.Drawing.Size(140, 26);
+            this.txtbxPort.TabIndex = 5;
+            this.txtbxPort.Text = "31090";
+            this.txtbxPort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // rdbtn_OtherMachine
             // 
@@ -177,28 +196,16 @@
             this.txtbx_Status.Size = new System.Drawing.Size(694, 556);
             this.txtbx_Status.TabIndex = 6;
             // 
-            // UpdateServerStatus
+            // Timer_UpdateServerStatus
             // 
-            this.UpdateServerStatus.Enabled = true;
-            this.UpdateServerStatus.Tick += new System.EventHandler(this.UpdateServerStatus_Tick);
+            this.Timer_UpdateServerStatus.Enabled = true;
+            this.Timer_UpdateServerStatus.Tick += new System.EventHandler(this.UpdateServerStatus_Tick);
             // 
-            // lbl_usingPort
+            // Timer_ReadAirlock
             // 
-            this.lbl_usingPort.AutoSize = true;
-            this.lbl_usingPort.Location = new System.Drawing.Point(188, 111);
-            this.lbl_usingPort.Name = "lbl_usingPort";
-            this.lbl_usingPort.Size = new System.Drawing.Size(87, 20);
-            this.lbl_usingPort.TabIndex = 6;
-            this.lbl_usingPort.Text = "Using Port:";
-            // 
-            // txtbxPort
-            // 
-            this.txtbxPort.Location = new System.Drawing.Point(192, 134);
-            this.txtbxPort.Name = "txtbxPort";
-            this.txtbxPort.Size = new System.Drawing.Size(140, 26);
-            this.txtbxPort.TabIndex = 5;
-            this.txtbxPort.Text = "31090";
-            this.txtbxPort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Timer_ReadAirlock.Enabled = true;
+            this.Timer_ReadAirlock.Interval = 10;
+            this.Timer_ReadAirlock.Tick += new System.EventHandler(this.Timer_ReadAirlock_Tick);
             // 
             // Tumbledryer_2D
             // 
@@ -233,9 +240,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_Refresh;
         private System.Windows.Forms.TextBox txtbx_Status;
-        private System.Windows.Forms.Timer UpdateServerStatus;
+        private System.Windows.Forms.Timer Timer_UpdateServerStatus;
         private System.Windows.Forms.Label lbl_usingPort;
         private System.Windows.Forms.TextBox txtbxPort;
+        private System.Windows.Forms.Timer Timer_ReadAirlock;
     }
 }
 

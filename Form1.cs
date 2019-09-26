@@ -95,5 +95,13 @@ namespace Tumbledryer_2D
                     break;
             }
         }
+
+        private void Timer_ReadAirlock_Tick(object sender, EventArgs e)
+        {
+            if (Airlock.TryTake(out string os))
+            {
+                txtbx_Status.AppendText(os);
+            }
+        }
     }
 }
