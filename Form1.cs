@@ -100,7 +100,7 @@ namespace Tumbledryer_2D
         {
             if (Airlock.TryTake(out string os))
             {
-                txtbx_Status.AppendText(os);
+                txtbx_Status.AppendText(os + "\r\n");
             }
         }
     }

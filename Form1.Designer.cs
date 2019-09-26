@@ -45,6 +45,7 @@
             this.txtbx_Status = new System.Windows.Forms.TextBox();
             this.Timer_UpdateServerStatus = new System.Windows.Forms.Timer(this.components);
             this.Timer_ReadAirlock = new System.Windows.Forms.Timer(this.components);
+            this.lbl_Statusbox = new System.Windows.Forms.Label();
             this.grpbx_Input.SuspendLayout();
             this.grpbx_Output.SuspendLayout();
             this.SuspendLayout();
@@ -189,11 +190,11 @@
             // 
             // txtbx_Status
             // 
-            this.txtbx_Status.Location = new System.Drawing.Point(404, 28);
+            this.txtbx_Status.Location = new System.Drawing.Point(404, 48);
             this.txtbx_Status.Multiline = true;
             this.txtbx_Status.Name = "txtbx_Status";
             this.txtbx_Status.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtbx_Status.Size = new System.Drawing.Size(694, 556);
+            this.txtbx_Status.Size = new System.Drawing.Size(694, 536);
             this.txtbx_Status.TabIndex = 6;
             // 
             // Timer_UpdateServerStatus
@@ -207,11 +208,21 @@
             this.Timer_ReadAirlock.Interval = 10;
             this.Timer_ReadAirlock.Tick += new System.EventHandler(this.Timer_ReadAirlock_Tick);
             // 
+            // lbl_Statusbox
+            // 
+            this.lbl_Statusbox.AutoSize = true;
+            this.lbl_Statusbox.Location = new System.Drawing.Point(400, 25);
+            this.lbl_Statusbox.Name = "lbl_Statusbox";
+            this.lbl_Statusbox.Size = new System.Drawing.Size(166, 20);
+            this.lbl_Statusbox.TabIndex = 7;
+            this.lbl_Statusbox.Text = "Bank  -  Pitch  -  Gload";
+            // 
             // Tumbledryer_2D
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1124, 719);
+            this.Controls.Add(this.lbl_Statusbox);
             this.Controls.Add(this.txtbx_Status);
             this.Controls.Add(this.grpbx_Output);
             this.Controls.Add(this.grpbx_Input);
@@ -244,6 +255,7 @@
         private System.Windows.Forms.Label lbl_usingPort;
         private System.Windows.Forms.TextBox txtbxPort;
         private System.Windows.Forms.Timer Timer_ReadAirlock;
+        private System.Windows.Forms.Label lbl_Statusbox;
     }
 }
 
